@@ -1,0 +1,44 @@
+# ROADMAP - Zabbor (RPG w stylu Gurk, Margonem)
+
+## Cel Projektu
+Stworzenie gry RPG w stylu retro (8-bit), inspirowanej grą "Gurk" i "Margonem".
+Kluczowe cechy:
+- Eksploracja świata na siatce (grid-based movement).
+- Walka turowa na osobnej planszy taktycznej.
+- Drużyna składająca się z kilku postaci (np. 3).
+- Rozwój postaci (statystyki, ekwipunek).
+
+## Aktualny Stan (v0.1)
+- Silnik: Phaser 3 + TypeScript.
+- Ruch: Postać porusza się po siatce 32x32 piksele.
+- Kamera: Podąża za graczem, ograniczona do krawędzi mapy (jak w Margonem).
+- Skalowanie: Tryb `Phaser.Scale.FIT` - gra zachowuje proporcje i skaluje się do okna (pixel art).
+- Mapa: Obecnie symulowana przez rysowaną siatkę (50x50 kafelków).
+- Widok: Ograniczony do 20x15 kafelków (viewport).
+
+## Plan Rozwoju (To-Do)
+
+### 1. System Mapy (Tilemap)
+- Wdrożenie `Phaser.Tilemaps`.
+- Import map z programu Tiled (format JSON).
+- Obsługa warstw (tło, kolizje, obiekty).
+- Zastąpienie obecnej siatki graficznej prawdziwą mapą.
+
+### 2. System Walki
+- Stworzenie osobnej sceny `CombatScene`.
+- Przejście z mapy świata do walki (losowe spotkania lub widoczni wrogowie).
+- Siatka taktyczna dla walki.
+- Kolejkowanie tur (Gracz -> Wrogowie).
+
+### 3. Logika Gry / RPG
+- [x] Definicja klas postaci: Rycerz, Paladyn, Mag, Łucznik, Kusznik, Druid.
+- [x] Definicja atrybutów: HP, MP, Prędkość, Siła, Zręczność, Inteligencja.
+- [x] Klasa `Party`: Zarządzanie drużyną (max 3 osoby).
+- Klasa `Player`: Przechowywanie statystyk instancji postaci.
+- Klasa `Enemy`: Statystyki wrogów, proste AI.
+- [x] Ekwipunek: Struktura danych i wyświetlanie w menu.
+
+### 4. Interfejs (UI)
+- [x] Menu drużyny (klawisz I): Wyświetlanie statystyk i ekwipunku.
+- Wyświetlanie portretów i pasków zdrowia na mapie (HUD).
+- Okna dialogowe z NPC.
