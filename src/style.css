@@ -2,8 +2,70 @@ body {
   margin: 0;
   padding: 0;
   background-color: #000;
-  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  font-family: sans-serif;
 }
+
+#game-container {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
 canvas {
   display: block;
+  border: 2px solid #555;
+}
+
+#party-info {
+  background-color: #1a1a1a;
+  color: #eee;
+  padding: 15px;
+  border: 2px solid #555;
+  border-radius: 5px;
+  max-width: 576px; /* Match the canvas width */
+  box-sizing: border-box;
+}
+
+#party-info h3 {
+  margin: 0 0 10px 0;
+  color: #ffff00;
+  font-size: 1.2em;
+  text-align: center;
+}
+
+.character-card {
+  background-color: #2a2a2a;
+  padding: 10px;
+  border-radius: 4px;
+  margin-bottom: 10px;
+}
+
+.character-card h4 {
+  margin: 0 0 8px 0;
+  color: #aaffaa;
+}
+
+.character-details {
+  display: flex;
+  justify-content: space-between;
+  gap: 20px;
+  font-size: 0.9em;
+}
+
+.character-details-col {
+  flex: 1;
+}
+
+.character-details-col ul {
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+}
+
+.character-details-col li span {
+  color: #aaa;
 }

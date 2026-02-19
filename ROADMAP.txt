@@ -36,6 +36,8 @@ Kluczowe cechy:
 - [x] Klasa `Party`: Zarządzanie drużyną (max 3 osoby).
 - Klasa `Player`: Przechowywanie statystyk instancji postaci.
 - Klasa `Enemy`: Statystyki wrogów, proste AI.
+- [x] Klasa `Player`: Przechowywanie statystyk instancji postaci.
+- [x] Klasa `Enemy`: Statystyki wrogów, proste AI.
 - [x] Ekwipunek: Struktura danych i wyświetlanie w menu.
 
 ### 4. Interfejs (UI)
